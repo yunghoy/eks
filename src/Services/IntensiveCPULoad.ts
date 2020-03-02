@@ -3,15 +3,15 @@ import * as _ from 'lodash';
 
 export class IntensiveCPULoad {
 
-    public static generateLoad(req: Request, res: Response): void {
+    public static generateCpuLoad(req: Request, res: Response): void {
         for (let i = 1; i <= 1000; i++) {
             console.log(this.getLargestPrimeNumber(i));
         }
-        res.send('Generated');
+        res.send('CpuLoadGenerated');
     }
 
     /**
-     * Naive prime number generator. This algorithm should use a lot of cpu power as much as possible
+     * Naive prime number generator. This algorithm should use intensive cpu power as much as possible.
      * @param limit
      */
     private static getLargestPrimeNumber(limit: number): number {
