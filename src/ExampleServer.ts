@@ -9,6 +9,8 @@ export class ExampleServer {
 
         app.get('/', (req: Request, res: Response) =>
             res.send(`Leyoungh's Kubernetes`));
+        app.get('/ping', (req: Request, res: Response) =>
+            res.send(`pong`));
         app.get('/cpuload', (req: Request, res: Response) =>
             IntensiveCPULoad.generateCpuLoad(req, res));
 
