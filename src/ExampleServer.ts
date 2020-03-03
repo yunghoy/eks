@@ -8,9 +8,9 @@ export class ExampleServer {
         const port = 3000;
 
         app.get('/', (req: Request, res: Response) =>
-            res.send(JSON.stringify(process.env)));
-//        app.get('/ping', (req: Request, res: Response) =>
-//            res.send(`pong`));
+            res.send(process.env));
+        app.get('/ping', (req: Request, res: Response) =>
+            res.send(`pong`));
         app.get('/cpuload', (req: Request, res: Response) =>
             IntensiveCPULoad.generateCpuLoad(req, res));
 
